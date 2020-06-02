@@ -17,8 +17,7 @@ public class ResourceCentre {
 		while (option != 5) {
 
 			ResourceCentre.menu();
-			option = Helper.readInt("Enter an option > ");
-			
+			option = Helper.readInt("Enter an option > ");			
 
 			if (option == 1) {
 				// View all items
