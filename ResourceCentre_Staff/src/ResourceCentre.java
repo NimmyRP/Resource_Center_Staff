@@ -103,7 +103,7 @@ public class ResourceCentre {
 
 	public static void menu() {
 		ResourceCentre.setHeader("RESOURCE CENTRE APP");
-		System.out.println("1. Display Inventory");
+		System.out.println("1. Display Resource Centre Inventory");
 		System.out.println("2. Add item");
 		System.out.println("3. Loan item");
 		System.out.println("4. Return item");
