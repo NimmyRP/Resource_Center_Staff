@@ -132,18 +132,30 @@ public class ResourceCentreTest {
 		cc2.setIsAvailable(false);
 		
 		Boolean isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
-		assertFalse("Check that item is returned?", isReturned);		
+		assertFalse("Check that camcorder CC0011 is returned -false?", isReturned);		
 		
 		isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
-		assertTrue("Check that item is returned", isReturned);
+		assertTrue("Check that amcorder CC0012 is returned- true", isReturned);
 		
 		isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0013");
-		assertFalse("Check that item is returned?", isReturned);
+		assertFalse("Check that amcorder CC0013 is returned - false?", isReturned);
 		
 	}
 	@Test
 	public void doReturnChromebookTest() {
-		//fail("Not yet implemented");
+		assertNotNull("Check if there is valid chromebook arraylist to add to", chromebookList);
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		cb2.setIsAvailable(false);
+		
+		Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
+		assertFalse("Check that chromebook CB0011 is returned - false?", isReturned);		
+		
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0012");
+		assertTrue("Check that chromebook CB0012 is returned - true", isReturned);
+		
+		isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0013");
+		assertFalse("Check that chromebook CB0013  is returned - false?", isReturned);
 	}
 	
 	@After
