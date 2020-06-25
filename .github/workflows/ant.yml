@@ -27,4 +27,4 @@ jobs:
     - name: Run JUnit test
       run: java -cp ResourceCentre_Staff/bin:ResourceCentre_Staff/ant/junit.jar:ResourceCentre_Staff/ant/org.hamcrest.core_1.3.0.v201303031735.jar org.junit.runner.JUnitCore ResourceCentreTest
     - name: Test Execution
-      run: java -cp ResourceCentre_Staff/bin ResourceCentre < ResourceCentre_Staff/user_input.txt
+      run: java -cp ResourceCentre_Staff/bin ResourceCentre < ResourceCentre_Staff/user_inpput.txt
