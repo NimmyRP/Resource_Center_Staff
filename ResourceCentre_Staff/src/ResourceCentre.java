@@ -1,5 +1,3 @@
-// Matthew made a change. 2nd change
-
 import java.util.ArrayList;
 
 public class ResourceCentre {
