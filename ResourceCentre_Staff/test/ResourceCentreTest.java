@@ -117,14 +117,20 @@ public class ResourceCentreTest {
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		// normal
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
+		//System.out.println("Normal");
+		//System.out.println(ok);
 		assertTrue("Test if an available item is ok to loan?", ok);
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
+		//System.out.println("Error");
+		//System.out.println(ok);
 		assertFalse("Test if an same item is NOT ok to loan again?", ok);	
 		//error condition
 		ResourceCentre.addCamcorder(camcorderList, cc2);	
 		cc2.setIsAvailable(false);
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020" );
+		//System.out.println("Error2");
+	    //System.out.println(ok);
 		assertFalse("Test that un-available item is NOT ok to loan?", ok);
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "8-8-2020" );
