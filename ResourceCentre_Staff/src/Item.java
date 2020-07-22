@@ -1,4 +1,4 @@
-// Matthew Quek
+// Matthew Quek - 22 Jul
 public class Item {
 	private String assetTag;
 	private String description;
