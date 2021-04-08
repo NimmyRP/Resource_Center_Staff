@@ -30,7 +30,7 @@ public class ResourceCentreTest {
 	
 	
 	@Test
-	public void addCamcorderTest() {
+	public void testAddCamcorder() {
 		// Item list is not null, so that can add a new item - boundary
 		assertNotNull("Check if there is valid Camcorder arraylist to add to", camcorderList);
 		//Given an empty list, after adding 1 item, the size of the list is 1 - normal
@@ -46,7 +46,7 @@ public class ResourceCentreTest {
 		assertSame("Check that Camcorder is added", cc2, camcorderList.get(1));
 	}
 	@Test
-	public void addChromebookTest() {
+	public void testAddChromebook() {
 		// Item list is not null, so that can add a new item - boundary
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		
@@ -58,14 +58,14 @@ public class ResourceCentreTest {
 		
 		//Add another item. test The size of the list is 2? - normal
 		//The item just added is as same as the second item of the list
-		//test
+		
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test that Chromebook arraylist size is 2", 2, chromebookList.size());
 		assertSame("Test that Chromebook is added", cb2, chromebookList.get(1));
 	}
 	
 	@Test
-	public void retrieveAllCamcorderTest() {
+	public void testRetrieveAllCamcorder() {
 		// Test if Item list is not null but empty -boundary
 		assertNotNull("Test if there is valid Camcorder arraylist to retrieve item", camcorderList);
 		
@@ -88,7 +88,7 @@ public class ResourceCentreTest {
 		
 	}
 	@Test
-	public void retrieveAllChrombookTest() {
+	public void testRetrieveAllChrombook() {
 		//fail("Not yet implemented");
 		// Test if Item list is not null but empty - boundary
 		assertNotNull("Test if there is valid Chromebook arraylist to retrieve item from", chromebookList);
@@ -111,7 +111,7 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-	public void doLoanCamcorderTest() {
+	public void testDoLoanCamcorder() {
 		//boundary
 		assertNotNull("test if there is valid Camcorder arraylist to loan from", camcorderList);
 		
@@ -140,7 +140,7 @@ public class ResourceCentreTest {
 	}
 	
 	@Test
-	public void doLoanChromebookTest() {
+	public void testDoLoanChromebook() {
 		//boundary
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		ResourceCentre.addChromebook(chromebookList, cb1);
@@ -162,7 +162,7 @@ public class ResourceCentreTest {
 	}
 	
 	@Test
-	public void doReturnCamcorderTest() {
+	public void testDoReturnCamcorder() {
 		//boundary
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		ResourceCentre.addCamcorder(camcorderList, cc1);
@@ -180,7 +180,7 @@ public class ResourceCentreTest {
 		
 	}
 	@Test
-	public void doReturnChromebookTest() {
+	public void testDoReturnChromebook() {
 		//boundary
 		assertNotNull("Check if there is valid chromebook arraylist to add to", chromebookList);
 		ResourceCentre.addChromebook(chromebookList, cb1);
