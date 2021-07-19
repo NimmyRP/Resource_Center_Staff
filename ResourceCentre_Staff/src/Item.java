@@ -11,7 +11,7 @@ public class Item {
 		this.isAvailable = true;
 	}
 	public String toString() {
-		
+		// update the toString ()
 		return String.format("%-10s %-30s %-10s %-10s", getAssetTag(),
 				getDescription(), showAvailability(getIsAvailable()),getDueDate());
 	}
