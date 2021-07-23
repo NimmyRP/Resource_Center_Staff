@@ -153,6 +153,7 @@ public class ResourceCentre {
 	}
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
+		// Diana demo github push
 		String output = "";		
 
 		for (int i = 0; i < chromebookList.size(); i++) {
