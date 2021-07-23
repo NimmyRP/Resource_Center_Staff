@@ -208,7 +208,7 @@ public class ResourceCentre {
 		boolean isLoaned = false;
 
 		for (int i = 0; i < camcorderList.size(); i++) {
-			String a = 0;
+			
 			String assetTag = camcorderList.get(i).getAssetTag();
 			
 			if (tag.equalsIgnoreCase(assetTag)
