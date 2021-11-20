@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class ResourceCentreTest {
 	private Camcorder cc1;
 	private Camcorder cc2;
+
 	private Chromebook cb1;
 	private Chromebook cb2;
 	
@@ -78,6 +79,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		ResourceCentre.addCamcorder(camcorderList, cc2);
 		assertEquals("Test that Camcorder arraylist size is 2", 2, camcorderList.size());
+		assertSame(cc1, camcorderList.get(0));
 		
 		//test if the expected output string same as the list of camcorders retrieved from the SourceCentre	
 		allCamcorder= ResourceCentre.retrieveAllCamcorder(camcorderList);
@@ -116,23 +118,24 @@ public class ResourceCentreTest {
 		assertNotNull("test if there is valid Camcorder arraylist to loan from", camcorderList);
 		
 		ResourceCentre.addCamcorder(camcorderList, cc1);
+		
 		// normal
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
-		//System.out.println("Normal");
-		//System.out.println(ok);
 		assertTrue("Test if an available item is ok to loan?", ok);
+		assertFalse(camcorderList.get(0).getIsAvailable());
+		assertEquals(camcorderList.get(0).getDueDate(),"8-8-2020");
+		
+				
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
-		//System.out.println("Error");
-		//System.out.println(ok);
 		assertFalse("Test if an same item is NOT ok to loan again?", ok);	
+		
 		//error condition
 		ResourceCentre.addCamcorder(camcorderList, cc2);	
 		cc2.setIsAvailable(false);
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020" );
-		//System.out.println("Error2");
-	    //System.out.println(ok);
 		assertFalse("Test that un-available item is NOT ok to loan?", ok);
+		
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "8-8-2020" );
 		assertFalse("Test that non-esiting item is NOT ok to loan?", ok);
