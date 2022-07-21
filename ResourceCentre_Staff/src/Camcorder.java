@@ -1,4 +1,4 @@
-//Added by Deborah
+
 public class Camcorder extends Item{
 	private int opticalZoom;
 
