@@ -138,8 +138,12 @@ public class ResourceCentre {
 	//================================= Option 1 View items (Read) =================================
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";			
-		for (int i = 0; i < camcorderList.size(); i++) {
-			output += String.format("%-84s\n", camcorderList.get(i).toString());
+		/*
+		 * for (int i = 0; i < camcorderList.size(); i++) { output +=
+		 * String.format("%-84s\n", camcorderList.get(i).toString()); }
+		 */
+		for (Camcorder i: camcorderList) {
+			output += i.toString();			
 		}
 		return output;
 	}
@@ -156,8 +160,13 @@ public class ResourceCentre {
 		// Diana demo github push
 		String output = "";		
 
-		for (int i = 0; i < chromebookList.size(); i++) {
-			output += String.format("%-84s\n", chromebookList.get(i).toString());
+		/*
+		 * for (int i = 0; i < chromebookList.size(); i++) { output +=
+		 * String.format("%-84s\n", chromebookList.get(i).toString()); }
+		 */
+		for (Chromebook i: chromebookList) {
+			output += i.toString();
+			
 		}
 		return output;
 	}

@@ -12,8 +12,8 @@ public class Item {
 	}
 	public String toString() {
 		// update the toString () // test
-		return String.format("%-10s %-30s %-10s %-10s", getAssetTag(),
-				getDescription(), showAvailability(getIsAvailable()),getDueDate());
+		return String.format("%-10s %-30s %-10s %-10s ", assetTag,
+				description, showAvailability(isAvailable),dueDate);
 	}
 
 	public String getAssetTag() {
