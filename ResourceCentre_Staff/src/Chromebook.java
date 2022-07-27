@@ -1,4 +1,3 @@
-//Added by Deborah
 
 public class Chromebook extends Item{
 	private String os;
