@@ -12,6 +12,7 @@ public class ResourceCentre {
 	private static final int ITEM_TYPE_CAMCORDER = 1;
 	private static final int ITEM_TYPE_CHROMEBOOK = 2;
 	
+	// final demo
 	
 	public static void main(String[] args) {
 
