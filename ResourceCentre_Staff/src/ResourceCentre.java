@@ -13,8 +13,7 @@ public class ResourceCentre {
 	private static final int ITEM_TYPE_CHROMEBOOK = 2;
 	
 	
-	// workflow demo
-	
+	// workflow demo to day 1 class
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
